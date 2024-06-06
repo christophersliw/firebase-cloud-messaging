@@ -20,3 +20,10 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+dist/
+node_modules/
+bin/
+obj/
+token.json
+
+	
