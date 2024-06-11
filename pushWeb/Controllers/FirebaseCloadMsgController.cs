@@ -33,12 +33,12 @@ public class FirebaseCloadMsgController : ControllerBase
     {
         _registrationTokenStore.AddToken(token.Token);
         
-        _logger.LogInformation($"Token registered:{token}");
+        _logger.LogInformation($"Token registered:{token.Token}");
         
         return Ok(new {success = "ok", message = "token registered"});
     }
     
-    [HttpGet]
+    [HttpPost]
     [Route("send")]
     [EnableCors("AllowAnyOrigin")]
     public async Task<IActionResult> Send()
